@@ -1,0 +1,47 @@
+
+.newitementry{
+    position: sticky;
+    top:0;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+
+    form{
+        display: flex;
+        justify-content: space-between;
+
+        label{
+            //it take label out of screen
+            position: absolute;
+            left:-10000px;
+        }
+
+        input[type ="text"]{
+            width:80%;
+            font-size: 1.25rem;
+            border: 2px solid $textbox-bgcolor;
+            border-radius: 0.75rem;
+            outline:none;
+
+        }
+
+        input[type ="text"]:focus,
+        input[type ="text"]:hover{
+
+            box-shadow: 4px 2px 5px #000;
+        
+        }
+
+        button{
+            font-size: 1.25rem;
+            background-color: $button-add-color;
+            padding:0.75rem;
+
+            @include mp(768px)
+            {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+}
+
